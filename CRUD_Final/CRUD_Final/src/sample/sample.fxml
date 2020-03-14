@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="719.0" prefWidth="1192.0" style="-fx-background-color: #F9F9F9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="371.0" layoutY="121.0" prefHeight="508.0" prefWidth="810.0" style="-fx-backround-color: transparent;">
+        <columns>
+          <TableColumn fx:id="idColumn" editable="false" prefWidth="89.06655883789062" resizable="false" text="id" />
+          <TableColumn fx:id="firstnameColumn" minWidth="0.0" onEditCommit="#onEditFirstName" prefWidth="145.86663818359375" resizable="false" text="firstname" />
+            <TableColumn fx:id="lastnameColumn" onEditCommit="#onEditLastName" prefWidth="168.5333251953125" resizable="false" text="lastname" />
+            <TableColumn fx:id="dateOfBirthColumn" minWidth="0.0" prefWidth="152.800048828125" resizable="false" text="date of birth" />
+            <TableColumn fx:id="emailColumn" onEditCommit="#onEditEmail" prefWidth="255.2000732421875" resizable="false" text="email" />
+        </columns>
+      </TableView>
+      <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="31.0" prefWidth="1132.0" style="-fx-background-color: white;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#actionX" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onDeleteRow" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#PanelAboutButton" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutX="-1.0" layoutY="32.0" prefHeight="687.0" prefWidth="362.0" style="-fx-background-color: #CB65FE;">
+         <children>
+            <TextField fx:id="firstNameTxtField" layoutX="58.0" layoutY="169.0" prefHeight="32.0" prefWidth="260.0" promptText="Firstname" style="-fx-background-color: white;" />
+            <TextField fx:id="lastNameTxtField" layoutX="58.0" layoutY="219.0" prefHeight="32.0" prefWidth="260.0" promptText="Lastname" style="-fx-background-color: white;" />
+            <TextField fx:id="emailTxtField" layoutX="58.0" layoutY="319.0" prefHeight="32.0" prefWidth="260.0" promptText="Email" style="-fx-background-color: white;" />
+            <DatePicker fx:id="datePicker" layoutX="58.0" layoutY="269.0" prefHeight="32.0" prefWidth="260.0" promptText="Date of Birth" style="-fx-background-color: white;" />
+            <Text fill="WHITE" layoutX="58.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new user">
+               <font>
+                  <Font name="Roboto" size="24.0" />
+               </font>
+            </Text>
+          <Button fx:id="createButton" layoutX="79.0" layoutY="393.0" mnemonicParsing="false" onAction="#create" prefHeight="30.0" prefWidth="83.0" style="-fx-background-radius: 20; -fx-background-color: #F3E038;" text="CREATE">
+               <font>
+                  <Font name="Roboto Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="deleteButton" layoutX="203.0" layoutY="393.0" mnemonicParsing="false" onAction="#onDeleteRow" prefHeight="30.0" prefWidth="83.0" style="-fx-background-radius: 20; -fx-background-color: #F3E038;" text="DELETE">
+               <font>
+                  <Font name="Roboto Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <Button layoutX="1131.0" layoutY="2.0" minWidth="20.0" mnemonicParsing="false" onAction="#actionX" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: white;" text="X" fx:id="xButton">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="CRUD_Final">
+    <output-path>$PROJECT_DIR$/out/artifacts/CRUD_Final</output-path>
+    <root id="root">
+      <element id="archive" name="CRUD_Final.jar">
+        <element id="module-output" name="CRUD_Final" />
+      </element>
+    </root>
+  </artifact>
+</component>
